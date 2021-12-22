@@ -1,0 +1,13 @@
+main .jumbo-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+main .jumbo-container img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.7);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
