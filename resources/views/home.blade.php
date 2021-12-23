@@ -20,5 +20,6 @@
             </div>
         </div>
         @include('sub-extensions.servers')
+        @include('sub-extensions.carousel')
     </main>
 @endsection

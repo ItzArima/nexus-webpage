@@ -16,6 +16,12 @@
         <!-- Custom CSS -->
         @yield('CSS')
 
+        <!-- Carousel Style -->
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" />
+
+        <!-- Carousel Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>
+
     </head>
     <body>
         <!-- Header -->

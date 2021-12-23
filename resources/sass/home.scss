@@ -104,3 +104,23 @@ main{
         }
     }
 }
+
+.gallery {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .gallery-cell {
+    width: 60%;
+    height: 350px !important;
+    margin-right: 10px;
+    transform: scale(0.75);
+    transition: transform 0.3s;
+  }
+  .text-center{
+    text-align:center
+  }
+
+  .is-selected{
+      transform: scale(1);
+  }
