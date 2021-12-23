@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Nexuscraft</title>
+        <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -25,5 +26,8 @@
 
         <!-- Footer -->
         @include('partials.footer')
+
+        <!-- Scripts -->
+        @yield('scripts')
     </body>
 </html>
