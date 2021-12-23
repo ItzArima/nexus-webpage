@@ -10,9 +10,10 @@ header{
     z-index: 99;
     width: 100%;
     padding: 0.25rem 2rem;
-    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+    backdrop-filter: blur(2px) brightness(0.7);
 
     .header-container{
         display: flex;

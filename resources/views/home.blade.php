@@ -19,5 +19,6 @@
                 <h3>Giocatori Online: <em id="onlinePlayers"></em></h3>
             </div>
         </div>
+        @include('sub-extensions.servers')
     </main>
 @endsection

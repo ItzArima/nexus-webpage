@@ -65,3 +65,36 @@ main .jumbo-container .online-players-container h3 em {
   font-family: McRegular;
 }
 
+main .servers-container .servers-banner {
+  display: flex;
+  width: 100%;
+  color: white;
+  height: 250px;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+}
+
+main .servers-container .servers-banner img {
+  height: 100%;
+  width: 100%;
+  transform: rotate(180deg);
+  filter: brightness(0.7);
+}
+
+main .servers-container .servers-banner h1 {
+  position: absolute;
+  left: 15%;
+  font-size: xxx-large;
+  font-family: minecraft;
+  z-index: 2;
+}
+
+main .servers-container .servers-banner .animation {
+  position: absolute;
+  filter: invert(1);
+  background-size: contain;
+  height: 300%;
+  background-position-y: center;
+}
+

@@ -67,4 +67,40 @@ main{
             }
         }
     }
+
+    .servers-container{
+
+        .servers-banner{
+            display: flex;
+            width: 100%;
+            color: white;
+            height: 250px;
+            position: relative;
+            align-items: center;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                transform: rotate(180deg);
+                filter: brightness(0.7);
+            }
+
+            h1{
+                position: absolute;
+                left: 15%;
+                font-size: xxx-large;
+                font-family: minecraft;
+                z-index: 2;
+            }
+
+            .animation{
+                position: absolute;
+                filter: invert(1);
+                background-size: contain;
+                height: 300%;
+                background-position-y: center;
+            }
+        }
+    }
 }
