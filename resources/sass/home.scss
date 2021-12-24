@@ -50,7 +50,39 @@ main{
             }
         }
 
-        .online-players-container{
+        .home-links{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+            backdrop-filter: blur(3px) brightness(0.7);
+
+            .links-centered{
+                width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+
+                a{
+                    color: #fefefe;
+                    text-decoration: none;
+                    padding: 1rem 0;
+                    width: calc(100% / 3);
+                    text-align: center;
+                    font-weight: 900;
+                    font-size: x-large;
+                    border-left: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+                    font-family: minecraft;
+                }
+
+                a:last-of-type{
+                    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+                }
+            }
+        }
+
+        .server-infos{
             position: absolute;
             top: calc(2rem + 84px);
             right: 2rem;
@@ -59,6 +91,7 @@ main{
                 color: #fff;
                 font-family: McRegular;
                 font-size: x-large;
+                margin-bottom: 1rem;
 
                 em{
                     font-style: normal;
@@ -156,68 +189,109 @@ main{
             }
         }
     }
-}
 
-.carousel-container{
-    display: flex;
-    padding: 3rem 5rem;
-    background-color: #0d0d0d;
-
-    .desc-container{
-        width: 50%;
+    .social-container{
+        text-align: center;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         color: white;
+        padding: 5rem 0;
 
-        em{
-            font-style: normal;
-            font-family: minecraft;
+        h3{
+            color: #8e8e8e;
         }
-    }
 
-    .gallery {
-        width: 50%;
-        padding-bottom: 2rem;
-    
-        .gallery-cell {
+        .social-links{
+            width: 75%;
             display: flex;
-            align-items: center;
-            width: 60%;
-            height: 350px !important;
-            margin-right: 10px;
-            transform: scale(0.75);
-            transition: transform 0.5s;
-            background-color: #2e2e2e;
-            border-radius: 30px;
-            margin: 1rem 0;
-        
-            img{
-                object-fit: cover;
-            }
-        
-            .cell-text{
-                margin: 0 auto;
-                text-align: center;
-                color: white;
-    
-                h1{
-                    font-family: minecraft;
-                    margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center; 
+            margin-top: 2.5rem;        
+
+            .link{
+                width: calc(100% / 6);
+                padding: 3rem;
+
+                img{
+                    width: 100%;
+                    transition: all 0.5s;
+                }
+
+                &:hover{
+                    
+                    img{
+                        transform: scale(1.25);
+                    }
                 }
             }
-        }    
+        }
+    }
+
+    .carousel-container{
+        display: flex;
+        padding: 3rem 5rem;
+        background-color: #0d0d0d;
     
-        .is-selected{
-            transform: scale(1);
-        }    
+        .desc-container{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
     
-        ol{
-            margin-top: -2rem;
-            position: static;
+            em{
+                font-style: normal;
+                font-family: minecraft;
+            }
+        }
+    
+        .gallery {
+            width: 50%;
+            padding-bottom: 2rem;
+        
+            .gallery-cell {
+                display: flex;
+                align-items: center;
+                width: 60%;
+                height: 350px !important;
+                margin-right: 10px;
+                transform: scale(0.75);
+                transition: transform 0.5s;
+                background-color: #2e2e2e;
+                border-radius: 30px;
+                margin: 1rem 0;
+            
+                img{
+                    object-fit: cover;
+                }
+            
+                .cell-text{
+                    margin: 0 auto;
+                    text-align: center;
+                    color: white;
+        
+                    h1{
+                        font-family: minecraft;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }    
+        
+            .is-selected{
+                transform: scale(1);
+            }    
+        
+            ol{
+                margin-top: -2rem;
+                position: static;
+            }
         }
     }
 }
+
+
 
 
   

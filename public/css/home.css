@@ -51,19 +51,53 @@ main .jumbo-container .jumbo-text h3 {
   font-family: McRegular;
 }
 
-main .jumbo-container .online-players-container {
+main .jumbo-container .home-links {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px) brightness(0.7);
+          backdrop-filter: blur(3px) brightness(0.7);
+}
+
+main .jumbo-container .home-links .links-centered {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main .jumbo-container .home-links .links-centered a {
+  color: #fefefe;
+  text-decoration: none;
+  padding: 1rem 0;
+  width: 33.3333333333%;
+  text-align: center;
+  font-weight: 900;
+  font-size: x-large;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: minecraft;
+}
+
+main .jumbo-container .home-links .links-centered a:last-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main .jumbo-container .server-infos {
   position: absolute;
   top: calc(2rem + 84px);
   right: 2rem;
 }
 
-main .jumbo-container .online-players-container h3 {
+main .jumbo-container .server-infos h3 {
   color: #fff;
   font-family: McRegular;
   font-size: x-large;
+  margin-bottom: 1rem;
 }
 
-main .jumbo-container .online-players-container h3 em {
+main .jumbo-container .server-infos h3 em {
   font-style: normal;
   color: #df6add;
   font-family: McRegular;
@@ -155,13 +189,49 @@ main .servers-container .server .server-text-container::before {
   -ms-filter: blur(20px);
 }
 
-.carousel-container {
+main .social-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 5rem 0;
+}
+
+main .social-container h3 {
+  color: #8e8e8e;
+}
+
+main .social-container .social-links {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+main .social-container .social-links .link {
+  width: 16.6666666667%;
+  padding: 3rem;
+}
+
+main .social-container .social-links .link img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+main .social-container .social-links .link:hover img {
+  transform: scale(1.25);
+}
+
+main .carousel-container {
   display: flex;
   padding: 3rem 5rem;
   background-color: #0d0d0d;
 }
 
-.carousel-container .desc-container {
+main .carousel-container .desc-container {
   width: 50%;
   display: flex;
   align-items: center;
@@ -169,17 +239,17 @@ main .servers-container .server .server-text-container::before {
   color: white;
 }
 
-.carousel-container .desc-container em {
+main .carousel-container .desc-container em {
   font-style: normal;
   font-family: minecraft;
 }
 
-.carousel-container .gallery {
+main .carousel-container .gallery {
   width: 50%;
   padding-bottom: 2rem;
 }
 
-.carousel-container .gallery .gallery-cell {
+main .carousel-container .gallery .gallery-cell {
   display: flex;
   align-items: center;
   width: 60%;
@@ -192,27 +262,27 @@ main .servers-container .server .server-text-container::before {
   margin: 1rem 0;
 }
 
-.carousel-container .gallery .gallery-cell img {
+main .carousel-container .gallery .gallery-cell img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.carousel-container .gallery .gallery-cell .cell-text {
+main .carousel-container .gallery .gallery-cell .cell-text {
   margin: 0 auto;
   text-align: center;
   color: white;
 }
 
-.carousel-container .gallery .gallery-cell .cell-text h1 {
+main .carousel-container .gallery .gallery-cell .cell-text h1 {
   font-family: minecraft;
   margin-bottom: 0.5rem;
 }
 
-.carousel-container .gallery .is-selected {
+main .carousel-container .gallery .is-selected {
   transform: scale(1);
 }
 
-.carousel-container .gallery ol {
+main .carousel-container .gallery ol {
   margin-top: -2rem;
   position: static;
 }

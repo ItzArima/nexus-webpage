@@ -7,4 +7,5 @@ MinecraftAPI.getServerStatus('mc.nexuscraft.it', {
 
   // you can change these to your own message!
   document.getElementById('onlinePlayers').innerHTML += status.players.now;
+  document.getElementById('status').innerHTML = status.server ? 'Online' : 'Offline';
 });

@@ -15,11 +15,21 @@
                 <h1>NexusCraft</h1>
                 <h3>Network</h3>
             </div>
-            <div class="online-players-container">
+            <div class="server-infos">
                 <h3>Giocatori Online: <em id="onlinePlayers"></em></h3>
+                <h3>Server IP: <em>mc.nexuscraft.it</em></h3>
+                <h3>Stato Server: <em id="status"></em></h3>
+            </div>
+            <div class="home-links">
+                <div class="links-centered">
+                    <a href="#servers">Modalita'</a>
+                    <a href="#staff">Staff</a>
+                    <a href="#social">Social</a>
+                </div>
             </div>
         </div>
         @include('sub-extensions.servers')
+        @include('sub-extensions.social')
         @include('sub-extensions.carousel')
     </main>
 @endsection

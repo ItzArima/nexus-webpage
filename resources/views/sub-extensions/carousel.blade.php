@@ -1,4 +1,4 @@
-<div class="carousel-container">
+<div class="carousel-container" id="staff">
     <div class="desc-container">
         <h1>I nostri <em>Staffer</em></h1>
     </div>
