@@ -5,6 +5,10 @@
     font-family: 'Nunito', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     position: fixed;
     z-index: 99;

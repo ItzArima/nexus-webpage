@@ -2,7 +2,7 @@
     <div class="header-container">
         <div class="left">
             <div class="logo">
-                <img src="{{asset('img/logo.png')}}" alt="">
+                <a href="#"><img src="{{asset('img/logo.png')}}" alt=""></a>
             </div>
         </div>
         <div class="right">
