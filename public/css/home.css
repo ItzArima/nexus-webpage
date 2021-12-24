@@ -8,6 +8,10 @@
   src: url(/fonts/McRegular.otf?2c90030680a2fafd21f53fd39a0862e7);
 }
 
+main {
+  background-color: #1e1e1e;
+}
+
 main .jumbo-container {
   max-width: 100vw;
   height: 100vh;
@@ -65,10 +69,6 @@ main .jumbo-container .online-players-container h3 em {
   font-family: McRegular;
 }
 
-main .servers-container {
-  background-color: #1e1e1e;
-}
-
 main .servers-container .servers-banner {
   display: flex;
   width: 100%;
@@ -123,20 +123,24 @@ main .servers-container .server .server-text-container {
 }
 
 main .servers-container .server .server-text-container .card {
-  width: 50%;
+  width: 75%;
+  position: relative;
+  bottom: 0;
   text-align: center;
   color: white;
-  padding: 1.5rem;
-  position: relative;
   padding: 2.5em 3em;
-  border-radius: 30px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.24);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: bottom 0.3s;
+  font-size: large;
 }
 
 main .servers-container .server .server-text-container .card h1 {
   margin-bottom: 1rem;
+  font-family: minecraft;
+}
+
+main .servers-container .server .server-text-container .card:hover {
+  bottom: 10px;
 }
 
 main .servers-container .server .server-text-container::before {
@@ -151,12 +155,31 @@ main .servers-container .server .server-text-container::before {
   -ms-filter: blur(20px);
 }
 
-.gallery {
-  width: 50%;
-  margin: 0 auto;
+.carousel-container {
+  display: flex;
+  padding: 3rem 5rem;
+  background-color: #0d0d0d;
 }
 
-.gallery .gallery-cell {
+.carousel-container .desc-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.carousel-container .desc-container em {
+  font-style: normal;
+  font-family: minecraft;
+}
+
+.carousel-container .gallery {
+  width: 50%;
+  padding-bottom: 2rem;
+}
+
+.carousel-container .gallery .gallery-cell {
   display: flex;
   align-items: center;
   width: 60%;
@@ -164,32 +187,33 @@ main .servers-container .server .server-text-container::before {
   margin-right: 10px;
   transform: scale(0.75);
   transition: transform 0.5s;
-  background-color: transparent;
+  background-color: #2e2e2e;
   border-radius: 30px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.24);
   margin: 1rem 0;
 }
 
-.gallery .gallery-cell img {
+.carousel-container .gallery .gallery-cell img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.gallery .gallery-cell .cell-text {
+.carousel-container .gallery .gallery-cell .cell-text {
   margin: 0 auto;
   text-align: center;
+  color: white;
 }
 
-.gallery .is-selected {
+.carousel-container .gallery .gallery-cell .cell-text h1 {
+  font-family: minecraft;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-container .gallery .is-selected {
   transform: scale(1);
 }
 
-.gallery ol {
+.carousel-container .gallery ol {
   margin-top: -2rem;
   position: static;
-}
-
-.gallery .flickity-viewport {
-  padding-bottom: 2rem;
 }
 

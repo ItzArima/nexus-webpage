@@ -11,6 +11,7 @@ $site_purple : #df6add;
 };
 
 main{
+    background-color: #1e1e1e;
 
     .jumbo-container{
         max-width: 100vw;
@@ -69,7 +70,6 @@ main{
     }
 
     .servers-container{
-        background-color: #1e1e1e;
 
         .servers-banner{
             display: flex;
@@ -122,18 +122,23 @@ main{
                 flex-direction: column;
                 align-items: center;
                 .card{
-                    width: 50%;
+                    width: 75%;
+                    position: relative;
+                    bottom: 0;
                     text-align: center;
                     color: white;
-                    padding: 1.5rem;
-                    position: relative;
                     padding: 2.5em 3em;
-                    border-radius: 30px;
-                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.24);
-                    backdrop-filter: blur(10px);
+                    border-radius: 15px;
+                    transition: bottom 0.3s;
+                    font-size: large;
 
                     h1{
                         margin-bottom: 1rem;
+                        font-family: minecraft;
+                    }
+
+                    &:hover{
+                        bottom: 10px;
                     }
                 }
 
@@ -153,46 +158,68 @@ main{
     }
 }
 
-.gallery {
-    width: 50%;
-    margin: 0 auto;
+.carousel-container{
+    display: flex;
+    padding: 3rem 5rem;
+    background-color: #0d0d0d;
 
-    .gallery-cell {
+    .desc-container{
+        width: 50%;
         display: flex;
         align-items: center;
-        width: 60%;
-        height: 350px !important;
-        margin-right: 10px;
-        transform: scale(0.75);
-        transition: transform 0.5s;
-        background-color: transparent;
-        border-radius: 30px;
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.24);
-        margin: 1rem 0;
-    
-        img{
-            object-fit: cover;
-        }
-    
-        .cell-text{
-            margin: 0 auto;
-            text-align: center;
-        }
-    }    
+        justify-content: center;
+        color: white;
 
-    .is-selected{
-        transform: scale(1);
-    }    
-
-    ol{
-        margin-top: -2rem;
-        position: static;
+        em{
+            font-style: normal;
+            font-family: minecraft;
+        }
     }
 
-    .flickity-viewport{
+    .gallery {
+        width: 50%;
         padding-bottom: 2rem;
+    
+        .gallery-cell {
+            display: flex;
+            align-items: center;
+            width: 60%;
+            height: 350px !important;
+            margin-right: 10px;
+            transform: scale(0.75);
+            transition: transform 0.5s;
+            background-color: #2e2e2e;
+            border-radius: 30px;
+            margin: 1rem 0;
+        
+            img{
+                object-fit: cover;
+            }
+        
+            .cell-text{
+                margin: 0 auto;
+                text-align: center;
+                color: white;
+    
+                h1{
+                    font-family: minecraft;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }    
+    
+        .is-selected{
+            transform: scale(1);
+        }    
+    
+        ol{
+            margin-top: -2rem;
+            position: static;
+        }
     }
 }
+
+
   
   
 
