@@ -21,9 +21,9 @@ Route::get('/regole', function () {
     return view('regole');
 })->name('regole');
 
-Route::get('/store', function () {
-    return view('store');
-})->name('store');
+Route::get('/stores', function () {
+    return view('stores');
+})->name('stores');
 
 Route::get('/vota', function () {
     return view('vota');
@@ -32,3 +32,7 @@ Route::get('/vota', function () {
 Route::get('/ban', function () {
     return view('ban');
 })->name('ban');
+
+Route::get('/stores/shop/{name}{id}', function ($id,$name) {
+    return view('stores.shop',compact('name','id'));
+})->name('shop');

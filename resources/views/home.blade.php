@@ -9,6 +9,13 @@
 
 @section('content')
     <main>
+        <div class="home-links">
+            <div class="links-centered">
+                <a href="#servers">Modalita'</a>
+                <a href="#social">Social</a>
+                <a href="#staff">Staff</a>
+            </div>
+        </div>
         <div class="jumbo-container">
             <img src="{{asset('img/hub.png')}}" alt="">
             <div class="jumbo-text">
@@ -19,13 +26,6 @@
                 <h3>Giocatori Online: <em id="onlinePlayers"></em></h3>
                 <h3>Server IP: <em>mc.nexuscraft.it</em></h3>
                 <h3>Stato Server: <em id="status"></em></h3>
-            </div>
-            <div class="home-links">
-                <div class="links-centered">
-                    <a href="#servers">Modalita'</a>
-                    <a href="#staff">Staff</a>
-                    <a href="#social">Social</a>
-                </div>
             </div>
         </div>
         @include('sub-extensions.servers')

@@ -1,15 +1,40 @@
-@font-face {
-  font-family: minecraft;
-  src: url(/fonts/minecraft.ttf?bb2364632c8098d9b448ce5bda4fc26e);
-}
-
-@font-face {
-  font-family: McRegular;
-  src: url(/fonts/McRegular.otf?2c90030680a2fafd21f53fd39a0862e7);
-}
-
 main {
   background-color: #1e1e1e;
+}
+
+main .home-links {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: calc(100vh - 57px);
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(2px) brightness(0.7);
+          backdrop-filter: blur(2px) brightness(0.7);
+  z-index: 3;
+}
+
+main .home-links .links-centered {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main .home-links .links-centered a {
+  color: #fefefe;
+  text-decoration: none;
+  padding: 1rem 0;
+  width: 33.3333333333%;
+  text-align: center;
+  font-weight: 900;
+  font-size: x-large;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: minecraft;
+}
+
+main .home-links .links-centered a:last-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 main .jumbo-container {
@@ -49,39 +74,6 @@ main .jumbo-container .jumbo-text h3 {
   font-size: 70px;
   color: white;
   font-family: McRegular;
-}
-
-main .jumbo-container .home-links {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(3px) brightness(0.7);
-          backdrop-filter: blur(3px) brightness(0.7);
-}
-
-main .jumbo-container .home-links .links-centered {
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-main .jumbo-container .home-links .links-centered a {
-  color: #fefefe;
-  text-decoration: none;
-  padding: 1rem 0;
-  width: 33.3333333333%;
-  text-align: center;
-  font-weight: 900;
-  font-size: x-large;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  font-family: minecraft;
-}
-
-main .jumbo-container .home-links .links-centered a:last-of-type {
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 main .jumbo-container .server-infos {
@@ -232,7 +224,7 @@ main .carousel-container {
 }
 
 main .carousel-container .desc-container {
-  width: 50%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,7 +237,7 @@ main .carousel-container .desc-container em {
 }
 
 main .carousel-container .gallery {
-  width: 50%;
+  width: 70%;
   padding-bottom: 2rem;
 }
 
@@ -260,6 +252,7 @@ main .carousel-container .gallery .gallery-cell {
   background-color: #2e2e2e;
   border-radius: 30px;
   margin: 1rem 0;
+  filter: blur(4px);
 }
 
 main .carousel-container .gallery .gallery-cell img {
@@ -280,10 +273,24 @@ main .carousel-container .gallery .gallery-cell .cell-text h1 {
 
 main .carousel-container .gallery .is-selected {
   transform: scale(1);
+  filter: blur(0);
+  transition: blur(0.5s);
 }
 
 main .carousel-container .gallery ol {
   margin-top: -2rem;
   position: static;
+}
+
+main .carousel-container .gallery .dot {
+  background-color: #c2bbbb;
+}
+
+main .carousel-container .gallery .next {
+  right: -25px;
+}
+
+main .carousel-container .gallery .previous {
+  left: -25px;
 }
 

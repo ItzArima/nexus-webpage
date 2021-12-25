@@ -19436,16 +19436,28 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/store.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/store.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/home.scss ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/home.scss ./resources/sass/store.scss ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\Ros\Desktop\nexus-webpage\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Users\Ros\Desktop\nexus-webpage\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\Ros\Desktop\nexus-webpage\resources\sass\home.scss */"./resources/sass/home.scss");
+__webpack_require__(/*! C:\Users\Ros\Desktop\nexus-webpage\resources\sass\home.scss */"./resources/sass/home.scss");
+module.exports = __webpack_require__(/*! C:\Users\Ros\Desktop\nexus-webpage\resources\sass\store.scss */"./resources/sass/store.scss");
 
 
 /***/ })

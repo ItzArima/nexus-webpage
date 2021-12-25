@@ -8,11 +8,9 @@
         <div class="footer-right">
             <div class="footer-sections-container">
                 <div class="footer-links">
-                    <a href="{{route('home')}}">Home</a>
-                    <a href="{{route('regole')}}">Regole</a>
-                    <a href="{{route('store')}}">Store</a>
-                    <a href="{{route('vota')}}">Vota</a>
-                    <a href="{{route('ban')}}">Ban</a>
+                @foreach(config('header-links') as $item)
+                    <a class="{{Route::currentRouteName() === $item['href'] ? 'active' : ''}}" href="{{route($item['href'])}}">{{$item['text']}}</a>
+                @endforeach
                 </div>
             </div>
             <div class="social-links">

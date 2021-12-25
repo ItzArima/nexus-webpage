@@ -1,5 +1,15 @@
 $site_purple : #df6add;
 
+@font-face {
+    font-family: minecraft;
+    src: url(../fonts/minecraft.ttf);
+};
+
+@font-face {
+    font-family: McRegular;
+    src: url(../fonts/McRegular.otf);
+};
+
 *{
     box-sizing: border-box;
     margin: 0;

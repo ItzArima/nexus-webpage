@@ -1,3 +1,13 @@
+@font-face {
+  font-family: minecraft;
+  src: url(/fonts/minecraft.ttf?bb2364632c8098d9b448ce5bda4fc26e);
+}
+
+@font-face {
+  font-family: McRegular;
+  src: url(/fonts/McRegular.otf?2c90030680a2fafd21f53fd39a0862e7);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

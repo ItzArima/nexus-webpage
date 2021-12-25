@@ -2,23 +2,23 @@
 
 return [
     [
-        'text' => 'home',
+        'text' => 'Home',
         'href' => 'home'
     ],
     [
-        'text' => 'regole',
+        'text' => 'Regole',
         'href' => 'regole'
     ],
     [
-        'text' => 'store',
-        'href' => 'store'
+        'text' => 'Store',
+        'href' => 'stores'
     ],
     [
-        'text' => 'vota',
+        'text' => 'Vota',
         'href' => 'vota'
     ],
     [
-        'text' => 'ban',
+        'text' => 'Ban',
         'href' => 'ban'
     ]
 ];
