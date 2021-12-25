@@ -25,7 +25,7 @@
         </div>
     </div>    
     <div class="footer-bottom">
-        <p>Template made with <a href="https://laravel.com">Laravel</a>.</p>
+        <p>Template made by <a href="https://www.instagram.com/rostiks64/" target="_blank">R</a>.</p>
         <p>All rights reserved by &copy; <a href="">NexusCraft</a> 2013-<?php echo(date('Y'));?></p>
     </div>
 </footer>

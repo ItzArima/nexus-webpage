@@ -11,6 +11,7 @@
     <main>
         <div class="home-links">
             <div class="links-centered">
+                <a href="#">Home</a>
                 <a href="#servers">Modalita'</a>
                 <a href="#social">Social</a>
                 <a href="#staff">Staff</a>
