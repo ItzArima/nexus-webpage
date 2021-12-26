@@ -8,7 +8,7 @@
         <div class="right">
             <nav>
                 @foreach(config('header-links') as $item)
-                    <a class="{{Route::currentRouteName() === $item['href'] ? 'active' : ''}}" href="{{route($item['href'])}}">{{$item['text']}}</a>
+                    <a class="navlink {{Route::currentRouteName() === $item['href'] ? 'active' : ''}}" href="{{route($item['href'])}}">{{$item['text']}}</a>
                 @endforeach
             </nav>
         </div>

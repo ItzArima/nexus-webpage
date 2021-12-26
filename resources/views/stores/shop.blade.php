@@ -36,8 +36,13 @@
 @section('scripts')
 <script src="https://www.paypal.com/sdk/js?client-id=AU8LBwK9_UZ33DlNxakVespnI40Xdlw2C_qIKelfP7D8PycnMjJ3XzMNMkwG1ZhxRN5P3Ci5G33rXjj-&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
 <script>
+    let navlink = document.getElementsByClassName('navlink');
+    navlink[2].classList.add('active');
     let card = document.getElementById('total')
-    function select(value,id){
+    let value = 0;
+    
+    function select(price,id){
+        value = price
         console.log(value)
         card.innerHTML = value;
         console.log(id)
@@ -64,7 +69,7 @@
             return actions.order.create({
                 purchase_units: [{
                     "amount":{
-                        "value":'0.1'
+                        "value":value
                     }
                 }]
             });
@@ -74,7 +79,7 @@
             return actions.order.capture().then(function(details) {
                 
                 // Full available details
-                console.log(details);
+                window.alert('Pagamento completato')
             });
         },
 

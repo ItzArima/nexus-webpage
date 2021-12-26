@@ -169,6 +169,11 @@ footer{
                 a{
                     display: flex;
                     justify-content: center;
+                    transition: all 0.3s;
+
+                    &:hover{
+                        transform: scale(1.25);
+                    }
                 }
             }
         }

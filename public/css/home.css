@@ -42,6 +42,7 @@ main .jumbo-container {
   height: 100vh;
   position: relative;
   min-height: 500px;
+  bottom: 57px;
 }
 
 main .jumbo-container img {
@@ -93,6 +94,11 @@ main .jumbo-container .server-infos h3 em {
   font-style: normal;
   color: #df6add;
   font-family: McRegular;
+}
+
+main .servers-container {
+  position: relative;
+  bottom: 57px;
 }
 
 main .servers-container .servers-banner {
@@ -188,11 +194,9 @@ main .social-container {
   justify-content: center;
   align-items: center;
   color: white;
-  padding: 5rem 0;
-}
-
-main .social-container h3 {
-  color: #8e8e8e;
+  padding-bottom: 3rem;
+  padding-top: 3rem h3;
+  padding-top-color: #8e8e8e;
 }
 
 main .social-container .social-links {

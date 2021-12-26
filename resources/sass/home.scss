@@ -41,6 +41,7 @@ main{
         height: 100vh;
         position: relative;
         min-height: 500px;
+        bottom: 57px;
 
         img{
             width: 100%;
@@ -95,6 +96,8 @@ main{
     }
 
     .servers-container{
+        position: relative;
+        bottom: 57px;
 
         .servers-banner{
             display: flex;
@@ -189,7 +192,8 @@ main{
         justify-content: center;
         align-items: center;
         color: white;
-        padding: 5rem 0;
+        padding-bottom: 3rem;
+        padding-top: 3rem
 
         h3{
             color: #8e8e8e;
