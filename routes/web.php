@@ -33,6 +33,6 @@ Route::get('/ban', function () {
     return view('ban');
 })->name('ban');
 
-Route::get('/stores/shop/{name}{id}', function ($id,$name) {
-    return view('stores.shop',compact('name','id'));
+Route::get('/stores/shop/{id}', function ($id) {
+    return view('stores.shop',compact('id'));
 })->name('shop');

@@ -12,7 +12,7 @@
     <div class="server-stores-container">
         @foreach (config('servers') as $key => $server)
             <div class="card">
-                <a href="{{route('shop', ['id' => $key , 'name' => $server['title']])}}"></a>
+                <a href="{{route('shop', ['id' => $key , 'server' => $server['title']])}}"></a>
                 <div class="card-top">
                     <h2 style="color:{{$server['theme']}};">{{$server['title']}}</h2>
                 </div>

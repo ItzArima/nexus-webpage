@@ -1,0 +1,52 @@
+main .jumbo {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .shop-container {
+  display: flex;
+}
+
+main .shop-container .left {
+  width: 75%;
+}
+
+main .shop-container .left .products-container {
+  display: flex;
+}
+
+main .shop-container .left .products-container .product {
+  width: calc(25% - 2rem);
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0 1rem;
+  min-height: 300px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+main .shop-container .left .products-container .active {
+  background-color: rgba(87, 87, 87, 0.5);
+}
+
+main .shop-container .right {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column-reverse;
+}
+
+main .shop-container .right p {
+  text-align: center;
+  font-size: large;
+  font-weight: 900;
+}
+
+main .shop-container .right p em {
+  font-style: normal;
+}
+
