@@ -153,7 +153,7 @@ main{
                     width: 75%;
                     position: relative;
                     bottom: 0;
-                    text-align: center;
+                    text-align: justify;
                     color: white;
                     padding: 2.5em 3em;
                     border-radius: 15px;
@@ -163,6 +163,7 @@ main{
                     h1{
                         margin-bottom: 1rem;
                         font-family: minecraft;
+                        text-align: center;
                     }
 
                     &:hover{
@@ -193,7 +194,7 @@ main{
         align-items: center;
         color: white;
         padding-bottom: 3rem;
-        padding-top: 3rem
+        padding-top: 3rem;
 
         h3{
             color: #8e8e8e;
