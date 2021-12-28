@@ -19436,17 +19436,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/sass/shop.scss":
-/*!**********************************!*\
-  !*** ./resources/sass/shop.scss ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/sass/store.scss":
 /*!***********************************!*\
   !*** ./resources/sass/store.scss ***!
@@ -19470,16 +19459,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/home.scss ./resources/sass/shop.scss ./resources/sass/vota.scss ./resources/sass/store.scss ***!
-  \**************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/home.scss ./resources/sass/vota.scss ./resources/sass/store.scss ***!
+  \***********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\Ros\Desktop\nexus\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Users\Ros\Desktop\nexus\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\Users\Ros\Desktop\nexus\resources\sass\home.scss */"./resources/sass/home.scss");
-__webpack_require__(/*! C:\Users\Ros\Desktop\nexus\resources\sass\shop.scss */"./resources/sass/shop.scss");
 __webpack_require__(/*! C:\Users\Ros\Desktop\nexus\resources\sass\vota.scss */"./resources/sass/vota.scss");
 module.exports = __webpack_require__(/*! C:\Users\Ros\Desktop\nexus\resources\sass\store.scss */"./resources/sass/store.scss");
 

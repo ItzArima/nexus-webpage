@@ -11,7 +11,7 @@ return [
     ],
     [
         'text' => 'Store',
-        'href' => 'stores'
+        'href' => 'store'
     ],
     [
         'text' => 'Vota',

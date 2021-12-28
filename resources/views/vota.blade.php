@@ -12,13 +12,13 @@
         <div class="vote-links-container">
             <div class="vote-container">
                 <div class="vote-link">
-                    <a href=""><img src="{{asset('img/mp.png')}}" alt=""></a>
+                    <a href="https://www.minecraft-italia.it/server/nexuscraftnetwork" target="_blank"><img src="{{asset('img/mp.png')}}" alt=""></a>
                 </div>
                 <a class="title" href=""><h1>Minecraft MP</h1></a>
             </div>
             <div class="vote-container">
                 <div class="vote-link">
-                    <a href="">
+                    <a href="https://www.minecraft-italia.it/server/nexuscraftnetwork" target="_blank">
                         <img src="{{asset('img/mcita-bg.jpg')}}" alt="">
                         <img class="absolute" src="{{asset('img/mcita-logo.jpg')}}" alt="">
                     </a>

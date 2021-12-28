@@ -16,6 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
     .copyDirectory('resources/fonts', 'public/fonts')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/home.scss', 'public/css')
-    .sass('resources/sass/shop.scss', 'public/css')
     .sass('resources/sass/vota.scss', 'public/css')
     .sass('resources/sass/store.scss', 'public/css');
