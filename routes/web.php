@@ -41,13 +41,6 @@ Route::get('/test', function () {
 Route::get('add{id}.{name}.{price}', function($id,$name,$price){
     $check = 0;
     $text = '';
-    foreach(Cart::content() as $item){
-        if($item->id == $id){
-            $check = 1;
-            $text = "already in cart";
-            return view('store' , compact('text'));
-        }
-    }
     foreach(config('stores') as $product){
         if($product['id'] == $id && $product['price'] !== $price){
             $check = 1;
@@ -55,10 +48,17 @@ Route::get('add{id}.{name}.{price}', function($id,$name,$price){
             return view('store' , compact('text'));
         }
     }
+    foreach(Cart::content() as $item){
+        if($item->id == $id){
+            $check = 1;
+            $text = "already in cart";
+            return view('store' , compact('text'));
+        }
+    }
     if($check==0){
         Cart::add($id,$name,1,$price,0);
 
-        return view('stores.cart');
+        return view('store');
     }
 })->name('add');
 
@@ -70,3 +70,17 @@ Route::get('reset', function(){
     Cart::destroy();
     return view('store');
 })->name('reset');
+
+Route::get('remove.{id}', function($id){
+    $check = 0;
+    foreach(Cart::content() as $item){
+        if($item->rowId == $id){
+            $check = 1;
+            Cart::remove($id);
+            return view('stores.cart');
+        }
+    }
+    if($check == 0){
+        return view('stores.cart');
+    }
+})->name('remove');

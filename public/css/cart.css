@@ -1,0 +1,14 @@
+main .cart-container {
+  padding: 10rem 0;
+}
+
+main .cart-container .cart .product-row {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+main .cart-container .cart .product-row div {
+  width: 33.3333333333%;
+}
+

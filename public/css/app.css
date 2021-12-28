@@ -56,7 +56,7 @@ header .header-container .right {
 header .header-container .right nav {
   display: flex;
   justify-content: space-between;
-  height: 100%;
+  line-height: 50px;
 }
 
 header .header-container .right nav .active {
@@ -67,8 +67,7 @@ header .header-container .right nav a {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  height: 100%;
-  padding: 0.5rem 0;
+  height: 80%;
   transition: color 0.3s;
   text-transform: uppercase;
 }
@@ -76,6 +75,37 @@ header .header-container .right nav a {
 header .header-container .right nav a:hover {
   border-bottom: 2px solid #df6add;
   color: #df6add;
+}
+
+header .header-container .right nav .basket {
+  position: relative;
+}
+
+header .header-container .right nav .basket img {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+}
+
+header .header-container .right nav .basket p {
+  position: absolute;
+  right: -6px;
+  top: 0;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+header .header-container .right nav .basket .visible {
+  display: block;
+}
+
+header .header-container .right nav .basket .hidden {
+  display: none;
 }
 
 footer {

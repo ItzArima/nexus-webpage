@@ -1,0 +1,18 @@
+main{
+    
+    .cart-container{
+        padding: 10rem 0;
+        .cart{
+
+            .product-row{
+                display: flex;
+                width: 50%;
+                justify-content: space-between;
+
+                div{
+                    width: calc(100% / 3);
+                }
+            }
+        }
+    }
+}
