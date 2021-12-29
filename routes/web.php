@@ -22,7 +22,7 @@ Route::get('/regole', function () {
 })->name('regole');
 
 Route::get('/store', function () {
-    $text = '';
+    $text = 'no errors';
     return view('store' , compact('text'));
 })->name('store');
 
@@ -38,14 +38,23 @@ Route::get('/test', function () {
     return view('stores.test');
 })->name('test');
 
-Route::get('add{id}.{name}.{price}', function($id,$name,$price){
+Route::get('add/{id}/{name}/{price}', function($id,$name,$price){
     $check = 0;
-    $text = '';
+    $text = 'no errors';
     foreach(config('stores') as $product){
-        if($product['id'] == $id && $product['price'] !== $price){
-            $check = 1;
-            $text = 'pls do not change parameters';
-            return view('store' , compact('text'));
+        foreach($product['categories'] as $category){
+            foreach($category as $product){
+                if($product['id'] == $id && $product['currentprice'] !== $price){
+                    $text = 'pls do note change the parameters 1';
+                    $check = 1;
+                    return view('store' , compact('text'));
+                }
+                else if($product['id'] == $id && $product['name'] !== $name){
+                    $text = 'pls do note change the parameters 2';
+                    $check = 1;
+                    return view('store' , compact('text'));
+                }
+            }
         }
     }
     foreach(Cart::content() as $item){
@@ -57,8 +66,7 @@ Route::get('add{id}.{name}.{price}', function($id,$name,$price){
     }
     if($check==0){
         Cart::add($id,$name,1,$price,0);
-
-        return view('store');
+        return view('store');       
     }
 })->name('add');
 
@@ -84,3 +92,25 @@ Route::get('remove.{id}', function($id){
         return view('stores.cart');
     }
 })->name('remove');
+
+Route::get('store/{mod}' , function($mod){
+    foreach(config('stores') as $store){
+        if($store['mod'] == $mod){
+            $categories = $store['categories'];
+            return view('store', compact('categories' , 'mod'));
+        }
+    }
+})->name('modSelection');
+
+Route::get('store/{mod}/{selection}' , function($mod,$selection){
+    foreach(config('stores') as $store){
+        if($store['mod'] == $mod){
+            $categories = $store['categories'];
+            foreach($categories as $key=>$products){
+                if($key == $selection){
+                    return view('store' , compact('products' , 'categories' , 'mod' , 'selection'));
+                }
+            }
+        }
+    }
+})->name('catSelection');

@@ -30,45 +30,118 @@ main .jumbo h1 {
 main .shop-container {
   display: flex;
   color: white;
+  /* .right{
+      width: 25%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: start;
+
+      p{
+          text-align: center;
+          font-size: large;
+          font-weight: 900;
+
+          em{
+              font-style: normal;
+          }
+      }
+  } */
 }
 
 main .shop-container .left {
-  width: 75%;
+  width: 100%;
+  display: flex;
 }
 
 main .shop-container .left .products-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+}
+
+main .shop-container .left .products-container .server-selection {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: end;
+}
+
+main .shop-container .left .products-container .server-selection .selection-centered {
+  width: 87.5%;
   display: flex;
 }
 
-main .shop-container .left .products-container .product {
-  width: calc(25% - 2rem);
+main .shop-container .left .products-container .server-selection .selection-centered a {
+  width: 25%;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: 900;
+  font-size: x-large;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: minecraft;
+}
+
+main .shop-container .left .products-container .server-selection .selection-centered a:last-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main .shop-container .left .products-container .shop-viewport {
+  min-height: 75vh;
+  max-height: 75vh;
+  width: 100%;
+  display: flex;
+}
+
+main .shop-container .left .products-container .shop-viewport .category-selector {
+  width: calc(12.5% + 1px);
+}
+
+main .shop-container .left .products-container .shop-viewport .category-selector a {
+  color: white;
+  text-decoration: none;
+}
+
+main .shop-container .left .products-container .shop-viewport .category-selector a h3 {
+  padding: 0.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main .shop-container .left .products-container .shop-viewport .products-viewport {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  width: 87.5%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin-right: 0.25rem;
+}
+
+main .shop-container .left .products-container .shop-viewport .products-viewport .product {
+  width: calc(20% - 2rem);
   border: 1px solid white;
   border-radius: 15px;
   padding: 1rem;
-  margin: 0 1rem;
-  min-height: 300px;
-  background-color: transparent;
-  transition: all 0.3s;
+  margin: 0.5rem 1rem;
+  height: calc(21.875vw - 1rem);
 }
 
-main .shop-container .left .products-container .active {
-  background-color: rgba(87, 87, 87, 0.5);
+main .shop-container .left .products-container .shop-viewport .products-viewport::-webkit-scrollbar {
+  width: 7px;
 }
 
-main .shop-container .right {
-  width: 25%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column-reverse;
+main .shop-container .left .products-container .shop-viewport .products-viewport::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-main .shop-container .right p {
-  text-align: center;
-  font-size: large;
-  font-weight: 900;
+main .shop-container .left .products-container .shop-viewport .products-viewport::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
 }
 
-main .shop-container .right p em {
-  font-style: normal;
+main .shop-container .left .products-container .shop-viewport .products-viewport::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 

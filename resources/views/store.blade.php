@@ -12,28 +12,51 @@
     <div class="shop-container">
         <div class="left">
             <div class="products-container">
-                @foreach(config('stores') as $key => $product)
-                    <div class="product">
-                        <h1>{{$product['title']}}</h1>
-                        <p>{{$product['price']}}</p>
-                        
-                        <form action="{{route('add', ['id' => $product['id'] ,'name' => $product['title'], 'price' => $product['price']])}}" method="GET">
-                            <button type="submit">Add to Cart</button>
-                        </form>
+                <div class="server-selection">
+                    <div class="selection-centered">
+                        @foreach(config('stores') as $server)
+                            <a href="{{route('modSelection' , ['mod' => $server['mod']])}}">{{$server['mod']}}</a>   
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
+                <div class="shop-viewport">
+                    <div class="category-selector">
+                        @if(isset($categories))
+                            @foreach($categories as $key => $category)
+                                <a href="{{route('catSelection' , ['mod' => $mod , 'selection' => $key])}}"><h3>{{$key}}</h3></a>
+                            @endforeach
+                        @endif
+                        <p>error handler: {{isset($text) ? $text : 'no errors'}}</p>
+                        <a href="{{route('reset')}}" style="color:red; text-decoration:none;"><h1>reset cart</h1></a>
+                    </div> 
+                    <div class="products-viewport">
+                        @if(isset($products))
+                            @foreach($products as $product)
+                                <div class="product">
+                                    <h2>{{$product['name']}}</h2>
+                                    @if($product['fullprice'] != '')
+                                        <p>{{$product['fullprice']}}</p>
+                                    @endif
+                                    <h3>{{$product['currentprice']}}</h3>
+                                    <span>{{$product['currency']}}</span>
+                                    <form action="{{route('add' , ['id' => $product['id'] , 'name' => $product['name'] , 'price' => $product['currentprice']])}}" method="GET">
+                                        <button type="submit">Aggiungi al carrello</button>
+                                    </form>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
             </div>  
         </div>  
-        <div class="right">
+        <!-- <div class="right">
             <div id="smart-button-container">
                 <div style="text-align: center;">
                     <div id="paypal-button-container"></div>
                 </div>
             </div>
-            <p>numero prodotti: <?php echo count(Cart::content())?></p>
-            <p>error handler: {{isset($text) ? $text : 'no errors'}}</p>
-            <a href="{{route('reset')}}" style="color:red; text-decoration:none;"><h1>reset cart</h1></a>
-        </div>
+            
+        </div> -->
     </div>
 </main>
 @endsection

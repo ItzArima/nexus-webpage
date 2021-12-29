@@ -29,32 +29,106 @@ main{
         color: white;
 
         .left{
-            width: 75%;
+            width: 100%;
+            display: flex;
+
             .products-container{
+                width: 100%;
                 display: flex;
-        
-                .product{
-                    width: calc(25% - 2rem);
-                    border: 1px solid white;
-                    border-radius: 15px;
-                    padding: 1rem;
-                    margin: 0 1rem;
-                    min-height: 300px;
-                    background-color: transparent;
-                    transition: all 0.3s;
+                flex-wrap: wrap;
+                justify-self: center;
+
+                .server-selection{                
+                    width: 100%;
+                    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+                    display: flex;
+                    justify-content: end;
+
+                    .selection-centered{
+                        width: 87.5%;
+                        display: flex;
+                        a{
+                            width: 25%;
+                            color: white;
+                            text-decoration: none;
+                            padding: 1rem 0;
+                            text-align: center;
+                            font-weight: 900;
+                            font-size: x-large;
+                            border-left: 1px solid rgba($color: #fff, $alpha: 0.3);
+                            font-family: minecraft;
+                        }
+    
+                        a:last-of-type{
+                            border-right: 1px solid rgba($color: #fff, $alpha: 0.3);
+                        }
+                    }
                 }
 
-                .active{
-                    background-color: rgba($color: #575757, $alpha: 0.5);
+                .shop-viewport{
+                    min-height: 75vh;
+                    max-height: 75vh;
+                    width: 100%;
+                    display: flex;
+
+                    .category-selector{
+                        width: calc(12.5% + 1px);
+                        
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            
+                            h3{
+                                padding: 0.25rem;
+                                border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+                            }
+                        }
+                    }
+
+                    .products-viewport{
+                        border-left: 1px solid rgba($color: #fff, $alpha: 0.3);
+                        width: 87.5%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        overflow: auto;
+                        margin-right: 0.25rem;
+
+                        .product{
+                            width: calc(20% - 2rem);
+                            border: 1px solid white;
+                            border-radius: 15px;
+                            padding: 1rem;
+                            margin: 0.5rem 1rem;
+                            height: calc((87.5vw / 4) - 1rem);
+                        }
+
+                        &::-webkit-scrollbar {
+                        width: 7px;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                        border-radius: 10px; 
+                        }
+                        
+                        &::-webkit-scrollbar-thumb {
+                        background: #888; 
+                        border-radius: 10px;
+                        }
+
+                        &::-webkit-scrollbar-thumb:hover {
+                        background: #555; 
+                        }
+                    }
                 }
             }
         }
 
-        .right{
+        /* .right{
             width: 25%;
             display: flex;
-            justify-content: space-evenly;
             flex-direction: column-reverse;
+            justify-content: start;
 
             p{
                 text-align: center;
@@ -65,6 +139,6 @@ main{
                     font-style: normal;
                 }
             }
-        }
+        } */
     }
 }
