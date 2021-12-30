@@ -64,7 +64,7 @@ main .shop-container .left .products-container .server-selection {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 main .shop-container .left .products-container .server-selection .selection-centered {
