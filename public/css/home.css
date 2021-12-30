@@ -251,17 +251,40 @@ main .servers-container .server-cards .col .container .back .inner {
   padding: 0 1.5rem;
 }
 
-main .servers-container .server-cards .col .container:hover .front,
-main .servers-container .server-cards .col .container:hover .back {
+main .servers-container .server-cards .col #s1,
+main .servers-container .server-cards .col #s2,
+main .servers-container .server-cards .col #s3,
+main .servers-container .server-cards .col #s4 {
+  display: none;
+}
+
+main .servers-container .server-cards .col label {
+  cursor: pointer;
+}
+
+main .servers-container .server-cards .col #s1:checked + label .front,
+main .servers-container .server-cards .col #s1:checked + label .back,
+main .servers-container .server-cards .col #s2:checked + label .front,
+main .servers-container .server-cards .col #s2:checked + label .back,
+main .servers-container .server-cards .col #s3:checked + label .front,
+main .servers-container .server-cards .col #s3:checked + label .back,
+main .servers-container .server-cards .col #s4:checked + label .front,
+main .servers-container .server-cards .col #s4:checked + label .back {
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-main .servers-container .server-cards .col .container:hover .front {
+main .servers-container .server-cards .col #s1:checked + label .front,
+main .servers-container .server-cards .col #s2:checked + label .front,
+main .servers-container .server-cards .col #s3:checked + label .front,
+main .servers-container .server-cards .col #s4:checked + label .front {
   transform: rotateY(-180deg);
   transform-style: preserve-3d;
 }
 
-main .servers-container .server-cards .col .container:hover .back {
+main .servers-container .server-cards .col #s1:checked + label .back,
+main .servers-container .server-cards .col #s2:checked + label .back,
+main .servers-container .server-cards .col #s3:checked + label .back,
+main .servers-container .server-cards .col #s4:checked + label .back {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }

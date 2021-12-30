@@ -141,7 +141,7 @@ main{
                 width: calc(50% - 2rem);
                 margin: 1rem;
                 cursor: pointer;
-    
+                
                 .container{
                     -webkit-transform-style: preserve-3d;
                     transform-style: preserve-3d;
@@ -260,30 +260,38 @@ main{
                             padding: 0 1.5rem;
                         }
                     }
-    
-                    &:hover{
-    
-                        .front, .back{
-                            -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-                            transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-                            -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-                            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-                            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-                        }
-                        
-                        .front{
-                            -webkit-transform: rotateY(-180deg);
-                            transform: rotateY(-180deg);
-                            -webkit-transform-style: preserve-3d;
-                            transform-style: preserve-3d;
-                        }
-    
-                        .back{
-                            -webkit-transform: rotateY(0deg);
-                            transform: rotateY(0deg);
-                            -webkit-transform-style: preserve-3d;
-                            transform-style: preserve-3d;
-                        }
+                }
+                
+                #s1,#s2,#s3,#s4{
+                    display: none;
+                }
+
+                label{
+                    cursor: pointer;
+                }
+
+                #s1:checked + label,#s2:checked + label,#s3:checked + label,#s4:checked + label{
+
+                    .front, .back{
+                        -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+                        transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+                        -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+                        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+                        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+                    }
+                    
+                    .front{
+                        -webkit-transform: rotateY(-180deg);
+                        transform: rotateY(-180deg);
+                        -webkit-transform-style: preserve-3d;
+                        transform-style: preserve-3d;
+                    }
+
+                    .back{
+                        -webkit-transform: rotateY(0deg);
+                        transform: rotateY(0deg);
+                        -webkit-transform-style: preserve-3d;
+                        transform-style: preserve-3d;
                     }
                 }
             }

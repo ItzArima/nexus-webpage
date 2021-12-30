@@ -7,6 +7,8 @@
     <div class="server-cards">
         @foreach (config('servers') as $server)
             <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <input type="checkbox" id="{{$server['id']}}">
+                <label for="{{$server['id']}}">
                 <div class="container">
                     <div class="front" style="background-image: url({{asset($server['image'])}});">
                         <div class="inner">
@@ -18,7 +20,7 @@
                         <p>{{$server['desc']}}</p>
                         </div>
                     </div>
-                </div>
+                </div></label>
             </div>
         @endforeach
     </div>
