@@ -36,4 +36,10 @@
 </main>
 @endsection
 
+@section('scripts')
+    <script>
+        document.querySelector('.basket').classList.add('active');
+    </script>
+@endsection
+
 

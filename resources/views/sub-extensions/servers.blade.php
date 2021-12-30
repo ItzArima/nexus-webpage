@@ -4,17 +4,24 @@
         <h1>Le Nostre Modalita'</h1>
         <img class="animation" src="{{asset('img/animation.gif')}}" alt="">
     </div>
-    @foreach (config('servers') as $server)
-        <div class="server">
-            <img src="{{asset($server['image'])}}" alt="">
-            <div class="server-text-container">
-                <div class="card">
-                    <h1 style="color:{{$server['theme']}};">{{$server['title']}}</h1>
-                    <p><strong>{{$server['desc']}}</strong></p>
+    <div class="server-cards">
+        @foreach (config('servers') as $server)
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url({{asset($server['image'])}});">
+                        <div class="inner">
+                            <h1 style="color: {{$server['theme']}}">{{$server['title']}}</h1>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                        <p>{{$server['desc']}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    @endforeach
+        @endforeach
+    </div>
 </div>
 
 <script>
