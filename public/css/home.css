@@ -138,6 +138,7 @@ main .servers-container .servers-banner .animation {
 main .servers-container .server-cards {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 main .servers-container .server-cards .col {

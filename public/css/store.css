@@ -96,7 +96,7 @@ main .shop-container .left .products-container .shop-viewport {
 }
 
 main .shop-container .left .products-container .shop-viewport .category-selector {
-  width: calc(12.5% + 1px);
+  width: 12.5%;
 }
 
 main .shop-container .left .products-container .shop-viewport .category-selector a {
