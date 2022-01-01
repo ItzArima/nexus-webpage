@@ -25,7 +25,14 @@
                     </div>
                 @endif    
                 <div class="products-viewport">
-                    @if(isset($categories) && !isset($products))
+                    @if(!isset($categories))
+                        <div class="shop-start-page">
+                            <img src="{{asset('img/shop_start.jpg')}}" alt="">
+                            <div class="text">
+                                <h1>Seleziona una Modalità</h1>
+                            </div>
+                        </div>
+                    @elseif(isset($categories) && !isset($products))
                         <h1 class="sel-title">Seleziona La Categoria</h1>
                         <div class="category-selector">
                             @foreach($categories as $key => $category)

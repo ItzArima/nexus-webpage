@@ -18,7 +18,7 @@ $site_purple : #df6add;
 }
 
 html{
-    scroll-behavior: smooth;
+    
 }
 
 header{
@@ -112,7 +112,7 @@ header{
 }
 
 footer{
-    background-color: #1e1e1e;
+    background-color: #0d0d0d;
 
     .footer-top{
         display: flex;
@@ -215,7 +215,6 @@ footer{
         justify-content: space-between;
         padding: 0.5rem 5rem;
         color: #8e8e8e;
-        background-color: #0d0d0d;
 
         p{
             font-size: large;

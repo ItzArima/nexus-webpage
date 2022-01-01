@@ -330,7 +330,6 @@ main .social-container .social-links .link:hover img {
 main .carousel-container {
   display: flex;
   padding: 3rem 5rem;
-  background-color: #0d0d0d;
 }
 
 main .carousel-container .desc-container {

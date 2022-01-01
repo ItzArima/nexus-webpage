@@ -24,7 +24,6 @@ class CartController extends Controller
 
     public function addItem($id,$name,$price){
         $check = 0;
-        $text = 'no errors';
         foreach(config('stores') as $product){
             foreach($product['categories'] as $category){
                 foreach($category as $product){

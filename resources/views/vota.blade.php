@@ -26,8 +26,5 @@
                 <a class="title" href=""><h1>Minecraft Italia</h1></a>
             </div>    
         </div>
-        <div class="your-vote">
-            <h2>Il tuo Voto è Importante!</h2>
-        </div>
     </main>
 @endsection

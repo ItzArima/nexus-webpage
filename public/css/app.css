@@ -15,10 +15,6 @@
   font-family: "Nunito", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 header {
   position: fixed;
   z-index: 99;
@@ -109,7 +105,7 @@ header .header-container .right nav .basket .hidden {
 }
 
 footer {
-  background-color: #1e1e1e;
+  background-color: #0d0d0d;
 }
 
 footer .footer-top {
@@ -213,7 +209,6 @@ footer .footer-bottom {
   justify-content: space-between;
   padding: 0.5rem 5rem;
   color: #8e8e8e;
-  background-color: #0d0d0d;
 }
 
 footer .footer-bottom p {
