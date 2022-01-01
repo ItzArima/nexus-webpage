@@ -11,6 +11,7 @@ return [
                     'fullprice' => '11.00',
                     'currentprice' => '9.35',
                     'currency' => 'EUR',
+                    'image' => 'img/store/abbonamento_1_vs.png',
                 ],
                 [
                     'id' => '2',
@@ -18,6 +19,7 @@ return [
                     'fullprice' => '20.00',
                     'currentprice' => '17.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/abbonamento_2_vs.png',
                 ],
             ],
             'Vip' => [
@@ -27,6 +29,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '0.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_48h_vs.png',
                 ],
                 [
                     'id' => '4',
@@ -34,6 +37,7 @@ return [
                     'fullprice' => '12.00',
                     'currentprice' => '10.20',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_recluta_vs.png',
                 ],
                 [
                     'id' => '5',
@@ -41,6 +45,7 @@ return [
                     'fullprice' => '27.00',
                     'currentprice' => '22.95',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_automa_vs.png',
                 ],
                 [
                     'id' => '6',
@@ -48,6 +53,7 @@ return [
                     'fullprice' => '59.00',
                     'currentprice' => '50.15',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_cyborg_vs.png',
                 ],
                 [
                     'id' => '7',
@@ -55,6 +61,7 @@ return [
                     'fullprice' => '108.00',
                     'currentprice' => '91.80',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_terminator_vs.png',
                 ],
                 [
                     'id' => '8',
@@ -62,6 +69,7 @@ return [
                     'fullprice' => '210.00',
                     'currentprice' => '178.50',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_kronos_vs.png',
                 ],
                 [
                     'id' => '9',
@@ -69,6 +77,7 @@ return [
                     'fullprice' => '300.00',
                     'currentprice' => '255.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_vs_multiverso.png',
                 ],
             ],
             'Vip Upgrade' => [
@@ -78,6 +87,7 @@ return [
                     'fullprice' => '15.00',
                     'currentprice' => '12.75',
                     'currency' => 'EUR',
+                    'image' => 'img/store/upgrade_recluta_vs.png',
                 ],
                 [
                     'id' => '11',
@@ -85,6 +95,7 @@ return [
                     'fullprice' => '32.00',
                     'currentprice' => '27.20',
                     'currency' => 'EUR',
+                    'image' => 'img/store/upgrade_automa_vs.png',
                 ],
                 [
                     'id' => '12',
@@ -92,6 +103,7 @@ return [
                     'fullprice' => '49.00',
                     'currentprice' => '41.65',
                     'currency' => 'EUR',
+                    'image' => 'img/store/upgrade_cyborg_vs.png',
                 ],
                 [
                     'id' => '13',
@@ -99,6 +111,7 @@ return [
                     'fullprice' => '102.00',
                     'currentprice' => '86.70',
                     'currency' => 'EUR',
+                    'image' => 'img/store/upgrade_terminator_vs.png',
                 ],
                 [
                     'id' => '14',
@@ -106,6 +119,7 @@ return [
                     'fullprice' => '90.00',
                     'currentprice' => '76.50',
                     'currency' => 'EUR',
+                    'image' => 'img/store/upgrade_kronos_vs.png',
                 ],
             ]
         ]
@@ -120,6 +134,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '12.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_discepolo_t.png',
                 ],
                 [
                     'id' => '16',
@@ -127,6 +142,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '24.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_evocatore_t.png',
                 ],
                 [
                     'id' => '17',
@@ -134,6 +150,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '54.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_leviatano_t.png',
                 ],
                 [
                     'id' => '18',
@@ -141,6 +158,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '84.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_alpha_t.png',
                 ],
                 [
                     'id' => '19',
@@ -148,6 +166,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '129.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_titano_t.png',
                 ],
             ],
             'Vip Upgrade' => [
@@ -157,6 +176,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '12.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_discepolo_t.png',
                 ],
                 [
                     'id' => '21',
@@ -164,6 +184,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '30.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_evocatore_t.png',
                 ],
                 [
                     'id' => '22',
@@ -171,6 +192,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '30.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_leviatano_t.png',
                 ],
                 [
                     'id' => '23',
@@ -178,6 +200,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '38.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/vip_alpha_t.png',
                 ],
             ],
             'Gadget' => [
@@ -187,6 +210,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '18.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/fly_1_t.png',
                 ],
                 [
                     'id' => '25',
@@ -194,6 +218,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '18.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/fly_2_t.png',
                 ],
                 [
                     'id' => '26',
@@ -201,6 +226,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '7.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/ec_1_t.png',
                 ],
                 [
                     'id' => '27',
@@ -208,6 +234,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '6.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/ec_2_t.png',
                 ],
                 [
                     'id' => '28',
@@ -215,6 +242,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '7.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/ec_1_t.png',
                 ],
                 [
                     'id' => '29',
@@ -222,6 +250,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '6.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/ec_2_t.png',
                 ],
                 [
                     'id' => '30',
@@ -229,6 +258,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '7.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/ec_1_t.png',
                 ],
                 [
                     'id' => '31',
@@ -236,6 +266,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '6.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/ec_2_t.png',
                 ],
                 [
                     'id' => '32',
@@ -243,6 +274,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '5.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/mistery_key_t.png',
                 ],
             ],
             'Offerte Speciali' => [
@@ -252,6 +284,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '18.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
                 [
                     'id' => '34',
@@ -259,6 +292,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '33.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
                 [
                     'id' => '35',
@@ -266,6 +300,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '61.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
                 [
                     'id' => '36',
@@ -273,6 +308,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '94.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
                 [
                     'id' => '37',
@@ -280,6 +316,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '24.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
             ]
         ]
@@ -294,6 +331,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '12.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
                 [
                     'id' => '39',
@@ -301,6 +339,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '25.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
                 [
                     'id' => '40',
@@ -308,6 +347,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '42.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
                 [
                     'id' => '41',
@@ -315,6 +355,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '80.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/speciali_t.png',
                 ],
             ]
         ]
@@ -329,6 +370,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '47.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/mvp_1.png',
                 ],
                 [
                     'id' => '43',
@@ -336,6 +378,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '410.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/mvp_2.png',
                 ],
             ],
             'Pass' =>[
@@ -345,6 +388,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '3.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/pass_1.png',
                 ],
                 [
                     'id' => '45',
@@ -352,6 +396,7 @@ return [
                     'fullprice' => '',
                     'currentprice' => '8.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/pass_2.png',
                 ],
             ],
             'TeamSpeak' => [
@@ -361,17 +406,9 @@ return [
                     'fullprice' => '',
                     'currentprice' => '35.00',
                     'currency' => 'EUR',
+                    'image' => 'img/store/boost_ts.jpg',
                 ],
             ],
-            'Donazione' => [
-                [
-                    'id' => '47',
-                    'name' => 'Donazione Libera',
-                    'fullprice' => '',
-                    'currentprice' => '0.00',
-                    'currency' => 'EUR',
-                ],
-            ]
         ]
     ]
 ];

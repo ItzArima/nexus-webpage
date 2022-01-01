@@ -15,8 +15,7 @@ class PagesController extends Controller
     }
 
     public function store(){
-        $text = 'no errors';
-        return view('store' , compact('text'));
+        return view('store');
     }
 
     public function vota(){

@@ -10,7 +10,8 @@ class StoresController extends Controller
         foreach(config('stores') as $store){
             if($store['mod'] == $mod){
                 $categories = $store['categories'];
-                return view('store', compact('categories' , 'mod'));
+                $toshop = 1;
+                return view('store', compact('categories' , 'mod' , 'toshop'));
             }
         }
     }
@@ -21,7 +22,8 @@ class StoresController extends Controller
                 $categories = $store['categories'];
                 foreach($categories as $key=>$products){
                     if($key == $selection){
-                        return view('store' , compact('products' , 'categories' , 'mod' , 'selection'));
+                        $toshop = 1;
+                        return view('store' , compact('products' , 'categories' , 'mod' , 'selection' , 'toshop'));
                     }
                 }
             }

@@ -1,3 +1,5 @@
+$site_purple : #df6add;
+
 main{
     background-color: #1e1e1e;
 
@@ -7,7 +9,7 @@ main{
         justify-content: center;
 
         img{
-            max-height: 50vh;
+            height: 500px;
             width: 100%;
             object-fit: cover;
             object-position: center;
@@ -28,96 +30,191 @@ main{
         display: flex;
         color: white;
 
-        .left{
+        .products-container{
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
+            justify-self: center;
 
-            .products-container{
+            .server-selection{                
+                width: 100%;
+                border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+                display: flex;
+                justify-content: center;
+
+                .selection-centered{
+                    width: 87.5%;
+                    display: flex;
+                    a{
+                        width: 25%;
+                        color: white;
+                        text-decoration: none;
+                        padding: 1rem 0;
+                        text-align: center;
+                        font-weight: 900;
+                        font-size: x-large;
+                        border-left: 1px solid rgba($color: #fff, $alpha: 0.3);
+                        font-family: minecraft;
+                    }
+
+                    a:last-of-type{
+                        border-right: 1px solid rgba($color: #fff, $alpha: 0.3);
+                    }
+                }
+            }
+
+            .shop-viewport{
                 width: 100%;
                 display: flex;
-                flex-wrap: wrap;
-                justify-self: center;
+                justify-content: center;
 
-                .server-selection{                
-                    width: 100%;
-                    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
-                    display: flex;
-                    justify-content: flex-end;
+                .back{
+                    padding-top: 1.5rem;
 
-                    .selection-centered{
-                        width: 87.5%;
-                        display: flex;
-                        a{
-                            width: 25%;
-                            color: white;
-                            text-decoration: none;
-                            padding: 1rem 0;
-                            text-align: center;
-                            font-weight: 900;
-                            font-size: x-large;
-                            border-left: 1px solid rgba($color: #fff, $alpha: 0.3);
-                            font-family: minecraft;
-                        }
-    
-                        a:last-of-type{
-                            border-right: 1px solid rgba($color: #fff, $alpha: 0.3);
-                        }
+                    a{
+                        padding: 0.5rem 1rem;
+                        background-color: $site_purple;
+                        color: white;
+                        position: sticky;
+                        top: 100px;
+                        text-decoration: none;
+                        font-weight: 900;
                     }
                 }
 
-                .shop-viewport{
-                    min-height: 75vh;
-                    max-height: 75vh;
-                    width: 100%;
+                .products-viewport{
+                    width: 75%;
                     display: flex;
+                    flex-wrap: wrap;
+                    overflow: auto;
 
-                    .category-selector{
-                        width: 12.5%;
-                        
-                        a{
-                            color: white;
-                            text-decoration: none;
-                            
-                            h3{
-                                padding: 0.25rem;
-                                border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
-                            }
-                        }
+                    .sel-title{
+                        text-align: center;
+                        width: 100%;
                     }
 
-                    .products-viewport{
-                        border-left: 1px solid rgba($color: #fff, $alpha: 0.3);
-                        width: 87.5%;
+                    .category-selector{
+                        width: 100%;
                         display: flex;
-                        flex-wrap: wrap;
-                        overflow: auto;
-                        margin-right: 0.25rem;
+                        justify-content: center;
 
-                        .product{
-                            width: calc(20% - 2rem);
+                        .category{
+                            width: calc((100% / 4) - 2rem);
                             border: 1px solid white;
                             border-radius: 15px;
-                            padding: 1rem;
                             margin: 0.5rem 1rem;
-                            height: calc((87.5vw / 4) - 1rem);
+                            height: 60vh;
+                            position: relative;
+                            overflow: hidden;
+
+                            
+                            a{
+                                color: white;
+                                text-decoration: none;
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                top: 0;
+                                left: 0;               
+                            }
+
+                            .title{
+                                height: 60%;
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                justify-content: center;
+                                background-color: #0000005c;
+                                transition: all 0.5s;
+                                border-bottom: 1px solid white;
+                                
+                                h2{
+                                    font-family: minecraft;
+                                }
+                            }
+
+                            .hover{
+                                height: 10%;
+                                position: absolute;
+                                bottom: 0;
+                                text-align: center;
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                filter: opacity(0);
+                                transition: all 0.5s;
+                            }
+
+                            &:hover{
+
+                                .title{
+                                    transform: scale(1.25);
+                                }
+                                
+                                .hover{
+                                    filter: opacity(1);
+                                    height: 30%;
+                                }
+                            }
+                        } 
+                    }
+
+                    .product{
+                        width: calc((100% / 3) - 2rem);
+                        border: 1px solid white;
+                        border-radius: 15px;
+                        padding: 1rem;
+                        margin: 0.5rem 1rem;
+                        height: 60vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .image{
+                            height: 60%;
+                            display: flex;
+                            align-items: center;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
                         }
 
-                        &::-webkit-scrollbar {
-                        width: 7px;
+                        .price{
+                            display: flex;
+
+                            p{
+                                color: red;
+                                text-decoration: line-through;
+                            }
+
+                            span{
+                                align-self: flex-end;
+                            }
                         }
 
-                        &::-webkit-scrollbar-track {
-                        background: #f1f1f1;
-                        border-radius: 10px; 
-                        }
-                        
-                        &::-webkit-scrollbar-thumb {
-                        background: #888; 
-                        border-radius: 10px;
-                        }
+                        form{
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
 
-                        &::-webkit-scrollbar-thumb:hover {
-                        background: #555; 
+                            button{
+                                padding: 0.5rem 1rem;
+                                background-color: transparent;
+                                border: 2px solid $site_purple;
+                                color: white;
+                                border-radius: 10px;
+                                transition: all 0.3s;
+                                cursor: pointer;
+
+                                &:hover{
+                                    background-color: $site_purple;
+                                }
+                            }
                         }
                     }
                 }
@@ -129,7 +226,7 @@ main{
             display: flex;
             flex-direction: column-reverse;
             justify-content: start;
-
+rgb(255, 163, 163)
             p{
                 text-align: center;
                 font-size: large;
@@ -140,5 +237,29 @@ main{
                 }
             }
         } */
+    }
+
+    .error-popup{
+        width: 20%;
+        position: fixed;
+        top: 0;
+        left: 40%;
+        background-color: red;
+        color: white;
+        z-index: 99999;
+        animation: nohov 5s;
+        padding: 1.5rem 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .none{
+        display: none;
+    }
+}
+
+@keyframes nohov{
+    100%{
+        filter: opacity(0);
     }
 }
