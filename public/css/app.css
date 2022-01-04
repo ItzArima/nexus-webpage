@@ -46,13 +46,43 @@ header .header-container .left .logo img {
 }
 
 header .header-container .right {
-  width: 30%;
+  width: 50%;
+  display: flex;
 }
 
 header .header-container .right nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   line-height: 50px;
+  flex-grow: 1;
+}
+
+header .header-container .right nav > div {
+  align-items: center;
+  display: flex;
+}
+
+header .header-container .right nav .app-links {
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+header .header-container .right nav .authenticated {
+  margin-right: 3rem;
+}
+
+header .header-container .right nav .authenticated .dropdown {
+  position: absolute;
+  height: 0;
+  top: 45px;
+  opacity: 0;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+header .header-container .right nav .authenticated .display {
+  height: auto;
+  opacity: 1;
 }
 
 header .header-container .right nav .active {
@@ -66,6 +96,7 @@ header .header-container .right nav a {
   height: 80%;
   transition: color 0.3s;
   text-transform: uppercase;
+  border-bottom: 2px solid transparent;
 }
 
 header .header-container .right nav a:hover {
@@ -73,17 +104,17 @@ header .header-container .right nav a:hover {
   color: #df6add;
 }
 
-header .header-container .right nav .basket {
+header .header-container .right .basket {
   position: relative;
 }
 
-header .header-container .right nav .basket img {
+header .header-container .right .basket img {
   height: 50px;
   width: 50px;
   filter: invert(1);
 }
 
-header .header-container .right nav .basket p {
+header .header-container .right .basket p {
   position: absolute;
   right: -6px;
   top: 0;
@@ -96,11 +127,11 @@ header .header-container .right nav .basket p {
   text-align: center;
 }
 
-header .header-container .right nav .basket .visible {
+header .header-container .right .basket .visible {
   display: block;
 }
 
-header .header-container .right nav .basket .hidden {
+header .header-container .right .basket .hidden {
   display: none;
 }
 

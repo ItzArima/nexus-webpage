@@ -20,7 +20,7 @@
                 @else
                     <div class="authenticated">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->name }} <span>&#11167;</span>
                         </a>
                         <div class="dropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -33,14 +33,14 @@
                             </form>
                        </div>
                     </div>
-                    <div class="basket">
-                        <a href="{{route('basket')}}"><img src="{{asset('img/cart.png')}}" alt=""></a>
-                        @if(DB::table('carts')->where('userId',Auth::user()->id)->count() > 0)
-                            <p>{{DB::table('carts')->where('userId',Auth::user()->id)->count()}}</p>
-                        @endif    
-                    </div>
-                @endguest
-            </nav>
+                </nav>
+                <div class="basket">
+                    <a href="{{route('basket')}}"><img src="{{asset('img/cart.png')}}" alt=""></a>
+                    @if(DB::table('carts')->where('userId',Auth::user()->id)->count() > 0)
+                        <p>{{DB::table('carts')->where('userId',Auth::user()->id)->count()}}</p>
+                    @endif    
+                </div>
+            @endguest
         </div>
     </div>
 </header>

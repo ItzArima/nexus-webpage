@@ -19,46 +19,59 @@ main{
                 }
 
                 .product{
-                    height: 40vh;
+                    width: calc((100% / 3) - 2rem);
                     border: 1px solid white;
                     border-radius: 15px;
                     padding: 1rem;
-                    position: relative;
-                    width: calc(25% - 2rem);
-                    margin: 0 1rem;
+                    margin: 0.5rem 1rem;
+                    height: 60vh;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
+                    justify-content: space-between;
                     color: white;
-                    background-color: #0d0d0d;
-    
+
+                    .image{
+                        height: 60%;
+                        display: flex;
+                        align-items: center;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
                     .price{
                         display: flex;
-                        align-items: baseline;
-                        position: absolute;
+
+                        p{
+                            color: red;
+                            text-decoration: line-through;
+                        }
+
+                        span{
+                            align-self: flex-end;
+                        }
+                    }
+
+                    form{
                         display: flex;
-                        bottom: 30%;
-                        left: 1rem;
-                        align-items: baseline;
-                    }
-    
-                    .name{
-                        text-align: center;
-                        position: absolute;
-                        top: 20%;
-                    }
-    
-                    .delete{
-                        position: absolute;
-                        bottom: 10%;
-                        border: 2px solid $site_purple;
-                        padding: 0.5rem 1rem;
-                        border-radius: 5px;
-                        text-decoration: none;
-                        color: white;
-                        transition: all 0.3s;
-    
-                        &:hover{
-                            background-color: $site_purple;
+                        justify-content: center;
+                        width: 100%;
+
+                        button{
+                            padding: 0.5rem 1rem;
+                            background-color: transparent;
+                            border: 2px solid $site_purple;
+                            color: white;
+                            border-radius: 10px;
+                            transition: all 0.3s;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: $site_purple;
+                            }
                         }
                     }
                 }

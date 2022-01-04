@@ -24,11 +24,14 @@
                 <div class="left">
                     @foreach(DB::table('carts')->where('userId' , Auth::user()->id)->get() as $item)
                         <div class="product">
+                            <div class="image">
+                                <img src="{{asset(config('productsList')[$item->productId - 1]['image'])}}" alt="">
+                            </div>
                             <div class="name">
-                                <h2></h2>
+                                <h2>{{config('productsList')[$item->productId - 1]['name']}}</h2>
                             </div>
                             <div class="price">
-                                <h3></h3>
+                                <h3>{{config('productsList')[$item->productId - 1]['currentprice']}}</h3>
                                 <span>EUR</span>
                             </div>
                             <form action="{{action('ProductsController@destroy' , $item->id)}}" method="post">
