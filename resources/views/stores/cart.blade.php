@@ -9,7 +9,7 @@
 <main>
     <div class="cart-container">
         <div class="cart">
-            @if(count(Cart::content()) == 0)
+            @if(DB::table('carts')->where('userId' , Auth::user()->id)->count() == 0)
                 <div class="left">
                     <div class="text">
                         <h1>Sembra che non ci sia nulla nel tuo carrello</h1>
@@ -22,23 +22,20 @@
                 </div>
             @else
                 <div class="left">
-                    @foreach(Cart::content() as $item)
-                        <?php
-                            if(!isset($total)){
-                                $total = 0;
-                            } 
-                            $total = $total + $item->price; 
-                            $total = number_format((float)$total, 2, '.', '');
-                        ?> 
+                    @foreach(DB::table('carts')->where('userId' , Auth::user()->id)->get() as $item)
                         <div class="product">
                             <div class="name">
-                                <h2>{{$item->name}}</h2>
+                                <h2></h2>
                             </div>
                             <div class="price">
-                                <h3>{{$item->price}}</h3>
+                                <h3></h3>
                                 <span>EUR</span>
                             </div>
-                            <a href="{{route('remove' , $item->rowId)}}">Rimuovi dal Carrello</a>
+                            <form action="{{action('ProductsController@destroy' , $item->id)}}" method="post">
+                                @csrf
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit">Rimuovi dal carrello</button>
+                            </form>
                         </div>
                     @endforeach
                 </div>
@@ -46,7 +43,7 @@
                     <div class="totale">
                         <h1>Totale: </h1>
                         <div class="price">
-                            <h3>{{$total}}</h3>
+                            <h3></h3>
                             <span>EUR</span>
                         </div>
                     </div>

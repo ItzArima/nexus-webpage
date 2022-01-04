@@ -12,10 +12,4 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .copyDirectory('resources/img', 'public/img')
-    .copyDirectory('resources/fonts', 'public/fonts')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/home.scss', 'public/css')
-    .sass('resources/sass/vota.scss', 'public/css')
-    .sass('resources/sass/cart.scss', 'public/css')
-    .sass('resources/sass/store.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css');

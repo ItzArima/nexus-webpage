@@ -62,7 +62,10 @@
                                     <h3>{{$product['currentprice']}}</h3>
                                     <span>{{$product['currency']}}</span>
                                 </div>
-                                <form action="{{route('add' , ['id' => $product['id'] , 'name' => $product['name'] , 'price' => $product['currentprice']])}}" method="GET">
+                                <form action="{{url('cart')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="userId" value="{{Auth::user()->id}}">
+                                    <input type="hidden" name="productId" value="{{$product['id']}}">
                                     <button type="submit">Aggiungi al carrello</button>
                                 </form>
                             </div>
