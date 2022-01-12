@@ -46,7 +46,7 @@
                     <div class="totale">
                         <h1>Totale: </h1>
                         <div class="price">
-                            <h3></h3>
+                            <h3>{{$total}}</h3>
                             <span>EUR</span>
                         </div>
                     </div>

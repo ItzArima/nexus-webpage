@@ -76,6 +76,7 @@ header{
                 .authenticated{
                     margin-right: 3rem;
 
+
                     .dropdown{
                         position: absolute;
                         height: 0;
@@ -83,6 +84,37 @@ header{
                         opacity: 0;
                         transition:all 0.3s;
                         overflow: hidden;
+                    }
+
+                    .nav-link{
+                        display: flex;
+                        align-items: center;
+                        color: white;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        border-bottom: 2px solid transparent;
+                        transition: all 0.3s;
+                        cursor: pointer;
+                            
+
+                        span{
+
+                            .rotate{
+                                transform: rotate(180deg);
+                            }
+
+                            img{
+                                width: 15px;
+                                margin-left: 3px;
+                                filter: invert(1);
+                                transition: all 0.3s;
+                            }
+                        }
+
+                        &:hover{
+                            color: $site_purple;
+                        }
+
                     }
 
                     .display{
@@ -100,7 +132,6 @@ header{
                     text-decoration: none;
                     color: #fff;
                     font-weight: 600;
-                    height: 80%;
                     transition: color 0.3s;
                     text-transform: uppercase;
                     border-bottom: 2px solid transparent;

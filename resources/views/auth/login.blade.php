@@ -17,23 +17,13 @@
                     <div class="mail">
                         <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus  placeholder="Inserisci la tua mail">
-                        <img src="{{asset('img/unlock-alt-solid.svg')}}" alt="">
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                        <img src="{{asset('img/user-regular.svg')}}" alt="">
                     </div>
 
                     <div class="password">
                         <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-                        <img src="{{asset('img/user-regular.svg')}}" alt="">
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Inserisci la tua password">
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                        <img src="{{asset('img/unlock-alt-solid.svg')}}" alt="">
                     </div>
 
                     <div class="remember-me">
@@ -65,6 +55,26 @@
                     </div>
 
                 </form>
+            </div>
+            <div class="errors-container">
+                <div class="flash-message">
+                    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+                        @if(Session::has('alert-' . $msg))
+                            <p class="alert alert-{{ $msg }}"><strong>{{ Session::get('alert-' . $msg) }}</strong></p>
+                        @endif
+                    @endforeach
+                </div>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>Questa mail non risulta registrata</strong>
+                    </span>
+                @enderror
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>Password errata</strong>
+                    </span>
+                @enderror
             </div>
         </div>
     </div>

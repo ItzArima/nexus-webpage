@@ -12,16 +12,16 @@
                     <a class="navlink {{Route::currentRouteName() === $item['href'] ? 'active' : ''}}" href="{{route($item['href'])}}">{{$item['text']}}</a>
                 @endforeach
                 </div>
-                @guest
+            @guest
                 <div class="login">
                     <a href="{{ route('login') }}">{{ __('Login') }}</a>
                     <a href="{{ route('register') }}">{{ __('Register') }}</a>
                 </div>
                 @else
                     <div class="authenticated">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span>&#11167;</span>
-                        </a>
+                        <p id="navbarDropdown" class="nav-link dropdown-toggle">
+                            {{ Auth::user()->name }} <span><img src="{{asset('img/chevron-down-solid.svg')}}" alt="" class="chevron"></span>
+                        </p>
                         <div class="dropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
@@ -47,13 +47,18 @@
 
 <script>
     let element = document.getElementById('navbarDropdown');
+    let chevron = document.querySelector('.chevron');
     let dropdown = document.querySelector('.dropdown');
-    element.addEventListener('click' , function(){
-        if(dropdown.classList.contains('display')){
-            dropdown.classList.remove('display');
-        }
-        else{
-            dropdown.classList.add('display');
-        }
-    })
+    if(element != null){
+        element.addEventListener('click' , function(){
+            if(dropdown.classList.contains('display')){
+                dropdown.classList.remove('display');
+                chevron.classList.remove('rotate');
+            }
+            else{
+                dropdown.classList.add('display');
+                chevron.classList.add('rotate');
+            }
+        })
+    }
 </script>

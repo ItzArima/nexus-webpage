@@ -14,15 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', 'PagesController@home')->name('home');
+
 Route::get('/', 'PagesController@home')->name('home');
 
 Route::get('/regole', 'PagesController@regole')->name('regole');
 
-Route::get('/store', 'PagesController@store')->name('store');
-
 Route::get('/vota', 'PagesController@vota')->name('vota');
 
 Route::get('/ban', 'PagesController@ban')->name('ban');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('cart', 'ProductsController');
 
 Route::get('add/{id}/{name}/{price}', 'CartController@addItem')->name('add');
 
@@ -36,15 +41,7 @@ Route::get('store/{mod}' , 'StoresController@modSelection')->name('modSelection'
 
 Route::get('store/{mod}/{selection}' , 'StoresController@catSelection')->name('catSelection');
 
-Auth::routes();
+Route::get('/store', 'PagesController@store')->name('store');
 
-Route::get('/test' ,  function(){
-    return view('layouts.app');
-});
+Route::get('/verify' , 'Auth\RegisterController@verifyUser');
 
-Route::resource('cart', 'ProductsController');
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
