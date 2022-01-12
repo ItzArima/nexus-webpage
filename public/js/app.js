@@ -49946,6 +49946,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/login.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/login.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/store.scss":
 /*!***********************************!*\
   !*** ./resources/sass/store.scss ***!
@@ -49969,9 +49980,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/home.scss ./resources/sass/vota.scss ./resources/sass/cart.scss ./resources/sass/store.scss ***!
-  \**************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/home.scss ./resources/sass/vota.scss ./resources/sass/cart.scss ./resources/sass/login.scss ./resources/sass/store.scss ***!
+  \******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49980,6 +49991,7 @@ __webpack_require__(/*! C:\MAMP\htdocs\nexus\resources\sass\app.scss */"./resour
 __webpack_require__(/*! C:\MAMP\htdocs\nexus\resources\sass\home.scss */"./resources/sass/home.scss");
 __webpack_require__(/*! C:\MAMP\htdocs\nexus\resources\sass\vota.scss */"./resources/sass/vota.scss");
 __webpack_require__(/*! C:\MAMP\htdocs\nexus\resources\sass\cart.scss */"./resources/sass/cart.scss");
+__webpack_require__(/*! C:\MAMP\htdocs\nexus\resources\sass\login.scss */"./resources/sass/login.scss");
 module.exports = __webpack_require__(/*! C:\MAMP\htdocs\nexus\resources\sass\store.scss */"./resources/sass/store.scss");
 
 

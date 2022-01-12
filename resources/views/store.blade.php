@@ -25,6 +25,14 @@
                     </div>
                 @endif    
                 <div class="products-viewport">
+                @guest
+                    <div class="shop-start-page">
+                        <img src="{{asset('img/shop_start.jpg')}}" alt="">
+                        <div class="text">
+                            <h1>Esegui l'accesso per proseguire</h1>
+                        </div>
+                    </div>
+                @else
                     @if(!isset($categories))
                         <div class="shop-start-page">
                             <img src="{{asset('img/shop_start.jpg')}}" alt="">
@@ -71,6 +79,7 @@
                             </div>
                         @endforeach
                     @endif
+                @endif    
                 </div>
             </div>
         </div> 

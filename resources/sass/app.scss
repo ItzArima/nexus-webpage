@@ -67,6 +67,12 @@ header{
                     justify-content: space-evenly;
                 }
 
+                .login{
+                    a:first-of-type{
+                        margin-right: 2rem;
+                    }
+                }
+
                 .authenticated{
                     margin-right: 3rem;
 
