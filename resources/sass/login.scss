@@ -1,0 +1,94 @@
+$site_purple : #df6add;
+
+main{
+    min-height: 75vh;
+    background-image: url('../img/login.png');
+    background-size: cover;
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .card{
+            width: 25%;
+            background-color: white;
+            padding: 2rem;
+            border-radius:15px;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+
+            .card-header{
+                text-align: center;
+            }
+
+            .card-body{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 100%;
+                    
+                    .mail, .password{
+                        display: flex;
+                        margin-bottom: 1rem;
+                        flex-direction: column;
+                        border-bottom: 2px solid $site_purple;
+                        position: relative;
+
+                        input{
+                            width: 60%;
+                            padding: 0.5rem 1rem;
+                            padding-left: 2rem;
+                            background-color: transparent;
+                            border: 0;
+                            width: 100%;
+
+                            &:focus, &:active{
+                                outline: none;
+                            }
+                        }
+
+                        img{
+                            height: 20px;
+                            width: 20px;
+                            position: absolute;
+                            bottom: 5px;
+                            filter: invert(70%);
+                        }
+                    }
+
+
+                    .login-button{
+                        display: flex;
+                        justify-content: center;
+                        margin: 1rem 0;
+
+                        button{
+                            padding: 0.25rem 0;
+                            width: 100%;
+                            background-color: transparent;
+                            border: 2px solid $site_purple;
+                            border-radius: 10px;
+                            font-size: large;
+                            cursor: pointer;
+                            transition: all 0.3s;
+                            font-weight: 900;
+
+                            &:hover{
+                                background-color: $site_purple;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

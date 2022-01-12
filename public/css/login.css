@@ -1,0 +1,98 @@
+main {
+  min-height: 75vh;
+  background-image: url(/images/login.png?a53bc6bbbcb79d05cb8fc67cb0d72e84);
+  background-size: cover;
+}
+
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+main .container .card {
+  width: 25%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main .container .card .card-header {
+  text-align: center;
+}
+
+main .container .card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main .container .card .card-body form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+main .container .card .card-body form .mail,
+main .container .card .card-body form .password {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  border-bottom: 2px solid #df6add;
+  position: relative;
+}
+
+main .container .card .card-body form .mail input,
+main .container .card .card-body form .password input {
+  width: 60%;
+  padding: 0.5rem 1rem;
+  padding-left: 2rem;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+}
+
+main .container .card .card-body form .mail input:focus,
+main .container .card .card-body form .mail input:active,
+main .container .card .card-body form .password input:focus,
+main .container .card .card-body form .password input:active {
+  outline: none;
+}
+
+main .container .card .card-body form .mail img,
+main .container .card .card-body form .password img {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: 5px;
+  filter: invert(70%);
+}
+
+main .container .card .card-body form .login-button {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+main .container .card .card-body form .login-button button {
+  padding: 0.25rem 0;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #df6add;
+  border-radius: 10px;
+  font-size: large;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 900;
+}
+
+main .container .card .card-body form .login-button button:hover {
+  background-color: #df6add;
+  color: white;
+}
+

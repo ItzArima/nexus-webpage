@@ -67,6 +67,10 @@ header .header-container .right nav .app-links {
   justify-content: space-evenly;
 }
 
+header .header-container .right nav .login a:first-of-type {
+  margin-right: 2rem;
+}
+
 header .header-container .right nav .authenticated {
   margin-right: 3rem;
 }
