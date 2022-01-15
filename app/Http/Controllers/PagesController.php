@@ -13,20 +13,12 @@ class PagesController extends Controller
         return view('home');
     }
 
-    public function regole(){
-        return view('regole');
-    }
-
     public function store(){
         return view('store');
     }
 
     public function vota(){
         return view('vota');
-    }
-
-    public function ban(){
-        return view('ban');
     }
 
     public function cart(){

@@ -17,11 +17,7 @@ Route::get('/home', 'PagesController@home')->name('home');
 
 Route::get('/', 'PagesController@home')->name('home');
 
-Route::get('/regole', 'PagesController@regole')->name('regole');
-
 Route::get('/vota', 'PagesController@vota')->name('vota');
-
-Route::get('/ban', 'PagesController@ban')->name('ban');
 
 Auth::routes();
 

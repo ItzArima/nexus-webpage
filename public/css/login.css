@@ -2,6 +2,7 @@ main {
   min-height: 75vh;
   background-image: url(/images/login.png?a53bc6bbbcb79d05cb8fc67cb0d72e84);
   background-size: cover;
+  background-position-x: center;
 }
 
 main .container {
